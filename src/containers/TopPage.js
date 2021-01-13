@@ -15,6 +15,7 @@ class TopPage extends Component {
         <section className={styles.contentSection}>
           <div className={styles.sectionInnerWrap}>
             <h1>トップページです</h1>
+            <h1>ヤッホー！ Nozomiだよ</h1>
           </div>
         </section>
       </div>
@@ -26,11 +27,8 @@ const mapStateToProps = ({ app }) => ({
   isLoading: app.isLoading,
 })
 
-const mapDispatchToProps = dispatch => ({
-  setPageTitle: pageTitle => dispatch(setPageTitle(pageTitle)),
+const mapDispatchToProps = (dispatch) => ({
+  setPageTitle: (pageTitle) => dispatch(setPageTitle(pageTitle)),
 })
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(withRouter(TopPage))
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(TopPage))
